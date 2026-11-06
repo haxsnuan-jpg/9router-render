@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: 9router
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: HOSTNAME
+        value: 0.0.0.0
+      - key: DATA_DIR
+        value: /app/data
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: INITIAL_PASSWORD
+        generateValue: true
+      - key: API_KEY_SECRET
+        generateValue: true
+      # Optional: SQLite backup to a private GitHub repo (config survives restarts)
+      - key: BACKUP_REPO
+        sync: false
+      - key: BACKUP_TOKEN
+        sync: false
