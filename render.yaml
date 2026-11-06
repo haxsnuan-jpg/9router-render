@@ -7,6 +7,9 @@ services:
     dockerfilePath: ./Dockerfile
     healthCheckPath: /api/health
     autoDeploy: true
+    # Hanya bisa diakses lewat custom domain (gw.openclw.my.id).
+    # onrender.com akan balas 404 setelah custom domain terverifikasi.
+    renderSubdomainPolicy: disabled
     envVars:
       - key: PORT
         value: "10000"
