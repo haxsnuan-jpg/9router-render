@@ -10,7 +10,7 @@ Image dasar dipin ke `decolua/9router:0.5.112`. Dua tambahan di repo ini:
 
 ## Deploy
 
-1. Buka: https://render.com/deploy?repo=https://github.com/hasnuwan/9router-render
+1. Buka: https://render.com/deploy?repo=https://github.com/haxsnuan-jpg/9router-render
 2. Login GitHub (tidak diminta kartu), pilih **Apply**.
 3. Tunggu build ~2-4 menit sampai status **Live**.
 4. Buka URL `https://9router-xxxx.onrender.com`, login dengan password dari
